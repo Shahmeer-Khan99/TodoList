@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class ='content'>
+            <h2>Login</h2>
+            <span>
+            <% if(messages.error) {%>
+                <%= messages.error %>
+                    <% } %>
+            </span>
+                        <form action="/login" method="POST">
+                            <p>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </p>
+                            <p>
+                                <input type="password" name="password" id="password" placeholder="Password">
+                            </p>
+
+                            <button type="submit">Login</button>
+                        </form>
+
+
+                        <p class ='info'>
+                            <a href="/register">Not Yet Registreted? Register Here</a>
+                         </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
